@@ -1,1 +1,5 @@
 venv
+./solucion_1_audio_prompt/venv/
+./solucion_1_audio_prompt/.env
+./solucion_1_audio_prompt/input/
+./solucion_1_audio_prompt/src/pycache/
