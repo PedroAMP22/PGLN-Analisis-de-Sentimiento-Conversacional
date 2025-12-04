@@ -25,7 +25,7 @@ def analizar_audio_gemini(ruta_audio):
 
     print("✅ Audio listo. Analizando emociones y relaciones...")
 
-    # 2. Configurar Modelo (Gemini 1.5 Flash es Multimodal y Gratis)
+    # 2. Configurar Modelo (Gemini 2.5 Flash es Multimodal y Gratis)
     model = genai.GenerativeModel("gemini-2.5-flash")
 
     # 3. PROMPT ENGINEERING
