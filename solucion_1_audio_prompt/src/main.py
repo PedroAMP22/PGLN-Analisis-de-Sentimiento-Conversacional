@@ -1,7 +1,7 @@
 import os
 import json
 from analyzer import analizar_audio_gemini
-from visualizer import generar_grafo_visual
+from visualizer import generar_video_evolutivo
 
 # Rutas
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -12,61 +12,51 @@ os.makedirs(INPUT_DIR, exist_ok=True)
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 def seleccionar_archivo():
-    """Muestra un menú para elegir el audio."""
-    archivos = [f for f in os.listdir(INPUT_DIR) if f.endswith(('.mp3', '.wav', '.m4a', '.ogg'))]
-    
+    archivos = [f for f in os.listdir(INPUT_DIR) if f.endswith(('.mp3', '.wav', '.ogg'))]
     if not archivos:
         print(f"⚠️  No hay audios en: {INPUT_DIR}")
         return None
-
     print("\n--- 📂 ARCHIVOS DISPONIBLES ---")
-    for i, archivo in enumerate(archivos):
-        print(f"[{i + 1}] {archivo}")
+    for i, f in enumerate(archivos): print(f"[{i + 1}] {f}")
     
     while True:
         try:
-            seleccion = input("\n👉 Selecciona el número del archivo: ")
-            idx = int(seleccion) - 1
-            if 0 <= idx < len(archivos):
-                return archivos[idx]
-            else:
-                print("❌ Número inválido. Intenta de nuevo.")
-        except ValueError:
-            print("❌ Por favor, introduce un número.")
+            idx = int(input("\n👉 Selecciona número: ")) - 1
+            if 0 <= idx < len(archivos): return archivos[idx]
+        except ValueError: pass
 
 def main():
-    print("\n--- 🤖 SISTEMA DE ANÁLISIS DE EMOCIONES (GEMINI 2.5) ---")
+    print("\n--- 🎬 GENERADOR DE VIDEO DE EMOCIONES (GEMINI 2.5) ---")
     
-    # 1. Selección de archivo
-    archivo_nombre = seleccionar_archivo()
-    if not archivo_nombre:
-        return
+    archivo = seleccionar_archivo()
+    if not archivo: return
 
-    ruta_audio = os.path.join(INPUT_DIR, archivo_nombre)
+    nombre_base = input("👉 Nombre del proyecto (enter para default): ").strip()
+    if not nombre_base: nombre_base = archivo.split('.')[0]
 
-    # 2. Selección de nombre de salida
-    nombre_salida = input("👉 Escribe el nombre para guardar los resultados (sin extensión): ").strip()
-    if not nombre_salida:
-        nombre_salida = "resultado_" + archivo_nombre.split('.')[0] # Default si lo deja vacío
-    
     try:
-        # 3. Analizar
-        print(f"\n🚀 Procesando '{archivo_nombre}' con Gemini...")
-        datos_grafo = analizar_audio_gemini(ruta_audio)
+        # 1. Análisis
+        datos = analizar_audio_gemini(os.path.join(INPUT_DIR, archivo))
         
-        # 4. Guardar JSON
-        ruta_json = os.path.join(OUTPUT_DIR, f"{nombre_salida}.json")
-        with open(ruta_json, "w", encoding='utf-8') as f:
-            json.dump(datos_grafo, f, indent=4, ensure_ascii=False)
-        print(f"📄 JSON guardado: {ruta_json}")
+        # 2. Guardar JSON
+        with open(os.path.join(OUTPUT_DIR, f"{nombre_base}.json"), "w", encoding='utf-8') as f:
+            json.dump(datos, f, indent=4, ensure_ascii=False)
 
-        # 5. Visualizar (Pasamos el nombre personalizado)
-        generar_grafo_visual(datos_grafo, OUTPUT_DIR, nombre_salida)
+        # 3. Guardar Resumen de Texto
+        resumen = datos.get("resumen_global", "Sin resumen disponible.")
+        with open(os.path.join(OUTPUT_DIR, f"{nombre_base}_resumen.txt"), "w", encoding='utf-8') as f:
+            f.write(f"ANÁLISIS DE: {archivo}\n")
+            f.write("="*40 + "\n\n")
+            f.write(resumen)
+        print(f"📝 Resumen guardado en: {nombre_base}_resumen.txt")
+
+        # 4. Generar Video (GIF)
+        generar_video_evolutivo(datos, OUTPUT_DIR, nombre_base)
         
-        print("\n✅ ¡Todo listo! Revisa la carpeta 'output'.")
+        print("\n✨ ¡Proceso completado! Revisa la carpeta 'output'.")
 
     except Exception as e:
-        print(f"\n❌ ERROR CRÍTICO: {e}")
+        print(f"\n❌ ERROR: {e}")
 
 if __name__ == "__main__":
     main()

@@ -1,44 +1,161 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import os
+import imageio.v2 as imageio
+import shutil
 
-# AÑADIMOS el parámetro 'nombre_salida'
-def generar_grafo_visual(datos, output_folder, nombre_salida="grafo_resultado"):
-    print(f"🎨 Generando imagen del grafo: {nombre_salida}.png ...")
+# --- CONFIGURACIÓN DE ESTILO ---
+NODE_ACTIVE_BG = '#FFFFFF'
+NODE_INACTIVE_BG = '#F5F5F5'
+NODE_BORDER = '#000000'
+EDGE_COLOR = '#000000'
+
+def generar_video_evolutivo(datos, output_folder, nombre_salida="video_evolucion"):
+    timeline = datos.get("timeline", [])
+    if not timeline:
+        print("⚠️ No hay timeline.")
+        return
+
+    print(f"🎥 Generando video (Flechas Rectas Visibles)...")
+
+    # 1. CENSO Y ORDENACIÓN
+    todos_personajes = set()
+    for fase in timeline:
+        for n in fase.get("nodos", []): todos_personajes.add(n['id'])
+        for a in fase.get("aristas", []):
+            todos_personajes.add(a['origen'])
+            todos_personajes.add(a['destino'])
+            
+    if not todos_personajes: return
+
+    lista_personajes = sorted(list(todos_personajes))
+
+    # 2. POSICIONES FIJAS
+    G_global = nx.DiGraph()
+    G_global.add_nodes_from(lista_personajes)
+    pos_fija = nx.circular_layout(G_global, scale=0.85) 
+
+    # Carpeta temporal
+    temp_dir = os.path.join(output_folder, "temp_frames")
+    if os.path.exists(temp_dir): shutil.rmtree(temp_dir)
+    os.makedirs(temp_dir, exist_ok=True)
     
-    G = nx.DiGraph()
-    
-    colores_nodos = []
-    labels_nodos = {}
-    
-    # Procesar Nodos
-    for nodo in datos.get("nodos", []):
-        G.add_node(nodo['id'])
-        colores_nodos.append(nodo.get('color', '#CCCCCC'))
-        labels_nodos[nodo['id']] = f"{nodo['id']}\n({nodo['emocion']})"
+    filenames = []
+
+    # 3. GENERAR FRAMES
+    for i, fase in enumerate(timeline):
+        plt.figure(figsize=(10, 10))
+        plt.xlim(-1.2, 1.2)
+        plt.ylim(-1.2, 1.2)
         
-    # Procesar Aristas
-    labels_aristas = {}
-    for arista in datos.get("aristas", []):
-        G.add_edge(arista['origen'], arista['destino'])
-        labels_aristas[(arista['origen'], arista['destino'])] = arista['relacion']
+        G_frame = nx.DiGraph()
+        G_frame.add_nodes_from(lista_personajes)
         
-    # Dibujar
-    plt.figure(figsize=(12, 10))
-    pos = nx.spring_layout(G, k=0.9)
-    
-    nx.draw_networkx_nodes(G, pos, node_size=3000, node_color=colores_nodos, alpha=0.9)
-    nx.draw_networkx_labels(G, pos, labels=labels_nodos, font_size=9, font_weight="bold")
-    
-    nx.draw_networkx_edges(G, pos, width=2, alpha=0.5, arrowsize=20, edge_color="gray")
-    nx.draw_networkx_edge_labels(G, pos, edge_labels=labels_aristas, font_color="red", font_size=8)
-    
-    plt.title(f"Grafo de Emociones: {nombre_salida}")
-    plt.axis('off')
-    
-    # USAMOS el nombre personalizado
-    ruta_salida = os.path.join(output_folder, f"{nombre_salida}.png")
-    plt.savefig(ruta_salida)
-    plt.close()
-    
-    print(f"🖼️  Imagen guardada en: {ruta_salida}")
+        # A. NODOS
+        colores_fondo = []
+        labels_nodos = {}
+        activos = {n['id']: n for n in fase.get("nodos", [])}
+        
+        for p in lista_personajes:
+            if p in activos:
+                colores_fondo.append(NODE_ACTIVE_BG)
+                emocion = activos[p].get('emocion', '').upper()
+                labels_nodos[p] = f"{p}\n[{emocion}]"
+            else:
+                colores_fondo.append(NODE_INACTIVE_BG)
+                labels_nodos[p] = p
+
+        # Dibujamos nodos
+        # IMPORTANTE: Guardamos el tamaño en una variable para usarla luego
+        TAMANO_NODO = 4800 
+        nx.draw_networkx_nodes(
+            G_frame, pos_fija, 
+            node_size=TAMANO_NODO, 
+            node_color=colores_fondo, 
+            edgecolors=NODE_BORDER, 
+            linewidths=1.5
+        )
+        nx.draw_networkx_labels(G_frame, pos_fija, labels=labels_nodos, font_size=8, font_weight="bold")
+
+        # B. PROCESAR ARISTAS
+        interacciones = {}
+        for a in fase.get("aristas", []):
+            u, v = a['origen'], a['destino']
+            if u in lista_personajes and v in lista_personajes:
+                pair = frozenset([u, v])
+                if pair not in interacciones: interacciones[pair] = []
+                interacciones[pair].append(a)
+
+        aristas_uni = []
+        labels_uni = {}
+        aristas_bi = []
+        labels_bi = {}
+
+        for pair, lista in interacciones.items():
+            u, v = list(pair)[0], list(pair)[-1]
+            
+            # Caso Unidireccional
+            if len(lista) == 1 or (len(lista) > 1 and all(x['origen'] == lista[0]['origen'] for x in lista)):
+                item = lista[0]
+                aristas_uni.append((item['origen'], item['destino']))
+                labels_uni[(item['origen'], item['destino'])] = item['relacion']
+            
+            # Caso Bidireccional
+            else:
+                rel_u_v = next((x['relacion'] for x in lista if x['origen'] == u), "")
+                rel_v_u = next((x['relacion'] for x in lista if x['origen'] == v), "")
+                aristas_bi.append((u, v))
+                labels_bi[(u, v)] = f"{rel_u_v} / {rel_v_u}".strip(" / ")
+
+        # C. DIBUJAR ARISTAS (CORREGIDO)
+        
+        # 1. Unidireccionales (->)
+        if aristas_uni:
+            nx.draw_networkx_edges(
+                G_frame, pos_fija,
+                edgelist=aristas_uni,
+                width=1.5,
+                edge_color='black',
+                arrowsize=25,       # Flecha más grande
+                arrowstyle='-|>',   # Punta rellena
+                node_size=TAMANO_NODO, # ¡CLAVE! Para que la flecha no se meta dentro del nodo
+                connectionstyle="arc3,rad=0"
+            )
+            nx.draw_networkx_edge_labels(
+                G_frame, pos_fija, edge_labels=labels_uni, font_size=7,
+                bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="black", lw=0.5)
+            )
+
+        # 2. Bidireccionales (<->)
+        if aristas_bi:
+            nx.draw_networkx_edges(
+                G_frame, pos_fija,
+                edgelist=aristas_bi,
+                width=1.5,
+                edge_color='black',
+                arrowsize=25,        # Flecha más grande
+                arrowstyle='<|-|>',  # Doble punta rellena
+                node_size=TAMANO_NODO, # ¡CLAVE! Para que las puntas se vean
+                connectionstyle="arc3,rad=0"
+            )
+            nx.draw_networkx_edge_labels(
+                G_frame, pos_fija, edge_labels=labels_bi, font_size=7,
+                bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="black", lw=0.5)
+            )
+
+        plt.axis('off')
+        
+        filename = os.path.join(temp_dir, f"frame_{i}.png")
+        plt.savefig(filename, dpi=100) 
+        plt.close()
+        filenames.append(filename)
+
+    # GIF
+    if filenames:
+        ruta_gif = os.path.join(output_folder, f"{nombre_salida}.gif")
+        print("🎞️  Renderizando GIF...")
+        with imageio.get_writer(ruta_gif, mode='I', duration=3000, loop=0) as writer:
+            for filename in filenames:
+                writer.append_data(imageio.imread(filename))
+        shutil.rmtree(temp_dir)
+        print(f"✅ Video guardado en: {ruta_gif}")
