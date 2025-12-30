@@ -1,0 +1,450 @@
+[
+    {
+        "start": 2.58,
+        "end": 5.77,
+        "speaker": "AMADALA",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "I don't know how much longer I can hold off the veg, my friends. More and more style systems are joining the separatists."
+    },
+    {
+        "start": 6.48,
+        "end": 16.69,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "I don't know how much longer I can hold off the veg, my friends. More and more style systems are joining the separatists."
+    },
+    {
+        "start": 16.94,
+        "end": 18.32,
+        "speaker": "AMADALA",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "If they do break away, I will not let this republic that has stood for a thousand years be split in two. My negotiations will not fail."
+    },
+    {
+        "start": 18.54,
+        "end": 19.64,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "If they do break away, I will not let this republic that has stood for a thousand years be split in two. My negotiations will not fail."
+    },
+    {
+        "start": 20.11,
+        "end": 20.96,
+        "speaker": "AMADALA",
+        "emotion": "surprise",
+        "mentions": [
+            "JEDI"
+        ],
+        "text": "If they do, you must realize there aren't enough Jedi to protect the republic. We're keepers of the peace, not soldiers."
+    },
+    {
+        "start": 21.5,
+        "end": 24.55,
+        "speaker": "JEDI",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "If they do, you must realize there aren't enough Jedi to protect the republic. We're keepers of the peace, not soldiers."
+    },
+    {
+        "start": 25.7,
+        "end": 27.76,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "If they do, you must realize there aren't enough Jedi to protect the republic. We're keepers of the peace, not soldiers."
+    },
+    {
+        "start": 29.75,
+        "end": 30.74,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [
+            "YODA"
+        ],
+        "text": "Master Yoda, do you think it will really come to war?"
+    },
+    {
+        "start": 32.87,
+        "end": 34.52,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [
+            "YODA"
+        ],
+        "text": "Master Yoda, do you think it will really come to war?"
+    },
+    {
+        "start": 36.28,
+        "end": 38.17,
+        "speaker": "AMADALA",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
+    },
+    {
+        "start": 38.3,
+        "end": 39.82,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
+    },
+    {
+        "start": 41.83,
+        "end": 43.13,
+        "speaker": "AMADALA",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
+    },
+    {
+        "start": 43.89,
+        "end": 45.15,
+        "speaker": "AMADALA",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
+    },
+    {
+        "start": 47.89,
+        "end": 48.58,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [
+            "MAHANA",
+            "JIMA JAVUSKAR",
+            "MAHOHU JAPA"
+        ],
+        "text": "Mahana, Jima Javuskar, Waokimu. Good. Mahohu Japa, done."
+    },
+    {
+        "start": 48.95,
+        "end": 50.66,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [
+            "MAHANA",
+            "JIMA JAVUSKAR",
+            "MAHOHU JAPA"
+        ],
+        "text": "Mahana, Jima Javuskar, Waokimu. Good. Mahohu Japa, done."
+    },
+    {
+        "start": 52.41,
+        "end": 53.74,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [
+            "MAHANA",
+            "JIMA JAVUSKAR",
+            "MAHOHU JAPA"
+        ],
+        "text": "Mahana, Jima Javuskar, Waokimu. Good. Mahohu Japa, done."
+    },
+    {
+        "start": 54.71,
+        "end": 55.38,
+        "speaker": "AMADALA",
+        "emotion": "neutral",
+        "mentions": [],
+        "text": "Send them in. We will discuss this matter later."
+    },
+    {
+        "start": 57.29,
+        "end": 59.21,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Send them in. We will discuss this matter later."
+    },
+    {
+        "start": 64.32,
+        "end": 65.4,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
+    },
+    {
+        "start": 66.03,
+        "end": 68.24,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
+    },
+    {
+        "start": 68.7,
+        "end": 69.29,
+        "speaker": "AMADALA",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
+    },
+    {
+        "start": 70.18,
+        "end": 71.38,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
+    },
+    {
+        "start": 72.04,
+        "end": 73.91,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [
+            "AMADALA"
+        ],
+        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
+    },
+    {
+        "start": 74.26,
+        "end": 75.92,
+        "speaker": "JEDI",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "Do you have any idea who is behind this attack?"
+    },
+    {
+        "start": 77.23,
+        "end": 80.61,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Our intelligence points to disgruntled spice manners on the moons of Naboo."
+    },
+    {
+        "start": 82.25,
+        "end": 83.93,
+        "speaker": "JEDI",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "I think the Kandugu is behind it."
+    },
+    {
+        "start": 84.73,
+        "end": 86.57,
+        "speaker": "JEDI",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "He is a political idealist, not a murderer."
+    },
+    {
+        "start": 87.02,
+        "end": 87.93,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "He is a political idealist, not a murderer."
+    },
+    {
+        "start": 88.62,
+        "end": 90.95,
+        "speaker": "JEDI",
+        "emotion": "disgust",
+        "mentions": [
+            "DUGU"
+        ],
+        "text": "You know, my lady count Dugu was once a Jedi. He couldn't assassinate anyone. It's not his character."
+    },
+    {
+        "start": 91.58,
+        "end": 92.91,
+        "speaker": "JEDI",
+        "emotion": "surprise",
+        "mentions": [
+            "DUGU"
+        ],
+        "text": "You know, my lady count Dugu was once a Jedi. He couldn't assassinate anyone. It's not his character."
+    },
+    {
+        "start": 93.25,
+        "end": 94.18,
+        "speaker": "JEDI",
+        "emotion": "fear",
+        "mentions": [
+            "DUGU"
+        ],
+        "text": "You know, my lady count Dugu was once a Jedi. He couldn't assassinate anyone. It's not his character."
+    },
+    {
+        "start": 96.4,
+        "end": 97.67,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "But for certain Senator, in grave danger, you are."
+    },
+    {
+        "start": 98.33,
+        "end": 99.93,
+        "speaker": "AMADALA",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "But for certain Senator, in grave danger, you are."
+    },
+    {
+        "start": 100.49,
+        "end": 101.55,
+        "speaker": "AMADALA",
+        "emotion": "fear",
+        "mentions": [],
+        "text": "But for certain Senator, in grave danger, you are."
+    },
+    {
+        "start": 102.88,
+        "end": 104.08,
+        "speaker": "AMADALA",
+        "emotion": "sad",
+        "mentions": [
+            "JEDI"
+        ],
+        "text": "Master Jedi, may I suggest the Senator be placed under the protection of your graces?"
+    },
+    {
+        "start": 104.5,
+        "end": 107.29,
+        "speaker": "AMADALA",
+        "emotion": "disgust",
+        "mentions": [
+            "JEDI"
+        ],
+        "text": "Master Jedi, may I suggest the Senator be placed under the protection of your graces?"
+    },
+    {
+        "start": 107.51,
+        "end": 109.4,
+        "speaker": "AMADALA",
+        "emotion": "surprise",
+        "mentions": [
+            "JEDI"
+        ],
+        "text": "Master Jedi, may I suggest the Senator be placed under the protection of your graces?"
+    },
+    {
+        "start": 110.38,
+        "end": 113.33,
+        "speaker": "AMADALA",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "You really think that's a wise decision under these stressful times?"
+    },
+    {
+        "start": 113.33,
+        "end": 115.98,
+        "speaker": "JEDI",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "Chancellor, if I may comment, I do not believe in the situation."
+    },
+    {
+        "start": 115.08,
+        "end": 116.81,
+        "speaker": "AMADALA",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "Chancellor, if I may comment, I do not believe in the situation."
+    },
+    {
+        "start": 118.34,
+        "end": 119.91,
+        "speaker": "AMADALA",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "No, but I do, Senator. I realize all too well that additional security might be disruptive for you."
+    },
+    {
+        "start": 120.54,
+        "end": 125.68,
+        "speaker": "AMADALA",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "No, but I do, Senator. I realize all too well that additional security might be disruptive for you."
+    },
+    {
+        "start": 127.69,
+        "end": 129.28,
+        "speaker": "AMADALA",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "But perhaps some on your familiar wave."
+    },
+    {
+        "start": 130.46,
+        "end": 131.98,
+        "speaker": "AMADALA",
+        "emotion": "sad",
+        "mentions": [
+            "MASTER KENOBI"
+        ],
+        "text": "A no-friend like Master Kenobi."
+    },
+    {
+        "start": 133.02,
+        "end": 133.68,
+        "speaker": "JEDI",
+        "emotion": "fear",
+        "mentions": [
+            "MASTER KENOBI"
+        ],
+        "text": "A no-friend like Master Kenobi."
+    },
+    {
+        "start": 135.12,
+        "end": 135.84,
+        "speaker": "JEDI",
+        "emotion": "disgust",
+        "mentions": [
+            "ANCIENNE"
+        ],
+        "text": "That's possible. He's just returned from a border dispute on Ancienne."
+    },
+    {
+        "start": 136.67,
+        "end": 138.98,
+        "speaker": "JEDI",
+        "emotion": "angry",
+        "mentions": [
+            "ANCIENNE"
+        ],
+        "text": "That's possible. He's just returned from a border dispute on Ancienne."
+    },
+    {
+        "start": 140.72,
+        "end": 142.49,
+        "speaker": "AMADALA",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "Do it for me, my lady. Please. The thought of losing you is unbearable."
+    },
+    {
+        "start": 143.49,
+        "end": 145.05,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Do it for me, my lady. Please. The thought of losing you is unbearable."
+    },
+    {
+        "start": 147.1,
+        "end": 148.16,
+        "speaker": "AMADALA",
+        "emotion": "neutral",
+        "mentions": [],
+        "text": "Do it for me, my lady. Please. The thought of losing you is unbearable."
+    },
+    {
+        "start": 149.78,
+        "end": 151.72,
+        "speaker": "AMADALA",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "I will have Obi-Wan report you immediately, my lady."
+    }
+]
