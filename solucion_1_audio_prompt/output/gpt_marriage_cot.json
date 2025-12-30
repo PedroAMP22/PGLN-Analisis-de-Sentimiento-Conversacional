@@ -1,0 +1,135 @@
+{
+  "resumen_global": "Audio de ~3:01 con dos interlocutores (Voz_A y Voz_B) en una discusión intensa que progresa desde un intercambio relativamente controlado hacia una escalada (más volumen, mayor velocidad, tono más agudo y entrecortado), seguida por un quiebre emocional (señales de voz temblorosa/llanto y descenso de ritmo) y una desescalada final. Semánticamente, por el tipo de interacción y el patrón de tensión→descarga→contención, parece una conversación de conflicto relacional (reproches, defensa/contraargumento, y luego vulnerabilidad). El tono (prosodia) es consistente con el contenido: cuando aparecen reproches, el volumen y la velocidad aumentan; cuando aparece vulnerabilidad, baja el volumen y la voz se vuelve más inestable. En el mapeo interactivo, Voz_A abre y Voz_B responde, pero la iniciativa se alterna rápidamente durante la escalada (interrupciones y réplicas).",
+  "timeline": [
+    {
+      "fase": "Inicio contenido",
+      "descripcion": "Intercambio inicial con tono conversacional, todavía relativamente controlado: ritmo medio, volumen moderado, poca ruptura de voz.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "plantea"
+        },
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "responde"
+        }
+      ]
+    },
+    {
+      "fase": "Tensión creciente",
+      "descripcion": "Aparecen reproches/contradicciones. Se perciben aumentos de energía: ritmo más rápido, más énfasis y subidas de tono.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Disgust"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "reprocha"
+        },
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "cuestiona"
+        }
+      ]
+    },
+    {
+      "fase": "Escalada y confrontación",
+      "descripcion": "Pico de conflicto: volumen alto, habla más rápida, interrupciones y frases más cortas/afiladas. La prosodia sugiere alta activación emocional.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Anger"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "interrumpe"
+        },
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "acusa"
+        }
+      ]
+    },
+    {
+      "fase": "Quiebre emocional",
+      "descripcion": "La tensión se rompe: baja el ritmo, el volumen desciende y la voz se vuelve más temblorosa (posible llanto o respiración marcada). El contenido pasa de ataque a vulnerabilidad.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "confiesa"
+        },
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "contiene"
+        }
+      ]
+    },
+    {
+      "fase": "Desescalada y cierre",
+      "descripcion": "Se estabiliza la interacción: tono más bajo y pausado. Predomina contención y cierre del episodio emocional.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "calma"
+        },
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "acepta"
+        }
+      ]
+    }
+  ]
+}

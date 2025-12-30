@@ -1,0 +1,131 @@
+{
+  "resumen_global": "La escena captura una cena extremadamente incómoda y disfuncional ('Dinner Party' de The Office). La dinámica se define por la hostilidad pasivo-agresiva entre los anfitriones (Michael y Jan) y la desesperación de los invitados (Jim y Pam) por escapar. La tensión fluctúa entre la vergüenza ajena provocada por comportamientos inapropiados (la canción de Hunter), intentos fallidos de fuga y un juego de charadas que actúa como vehículo para la agresión verbal y el sabotaje emocional.",
+  "timeline": [
+    {
+      "fase": "Incomodidad Inicial y La Canción",
+      "descripcion": "Tras un brindis incómodo con un malapropismo de Michael ('oaky afterbirth'), Jan reproduce una canción sexualmente sugerente de su ex-asistente, bailando de forma extraña mientras los invitados observan atónitos.",
+      "nodos": [
+        {
+          "id": "Michael",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Joy"
+        },
+        {
+          "id": "Jim",
+          "emocion": "Surprise"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jan",
+          "destino": "Michael",
+          "relacion": "Ignora (prioriza la canción de Hunter)"
+        },
+        {
+          "origen": "Jim",
+          "destino": "Jan",
+          "relacion": "Observa con incredulidad"
+        }
+      ]
+    },
+    {
+      "fase": "Agresión Pasiva y Hambre",
+      "descripcion": "Jan insulta indirectamente a Pam comparando su eficiencia laboral desfavorablemente. Pam expresa su necesidad básica de comer ante la falta de comida.",
+      "nodos": [
+        {
+          "id": "Jan",
+          "emocion": "Disgust"
+        },
+        {
+          "id": "Pam",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jan",
+          "destino": "Pam",
+          "relacion": "Menosprecia (insulto velado)"
+        },
+        {
+          "origen": "Pam",
+          "destino": "Jan",
+          "relacion": "Tolera (por educación/hambre)"
+        }
+      ]
+    },
+    {
+      "fase": "Intento de Fuga Fallido",
+      "descripcion": "Jim inventa una inundación en su apartamento para irse. Michael lógicamente impide que Pam se vaya también, atrapándola en la fiesta.",
+      "nodos": [
+        {
+          "id": "Jim",
+          "emocion": "Fear"
+        },
+        {
+          "id": "Pam",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Michael",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jim",
+          "destino": "Michael",
+          "relacion": "Miente (para escapar)"
+        },
+        {
+          "origen": "Michael",
+          "destino": "Pam",
+          "relacion": "Retiene/Bloquea salida"
+        },
+        {
+          "origen": "Pam",
+          "destino": "Jim",
+          "relacion": "Culpa (por abandonarla)"
+        }
+      ]
+    },
+    {
+      "fase": "El Juego de la Ira",
+      "descripcion": "Durante las charadas, la tensión explota. Jan critica las reglas de Michael, Michael se frustra por su incompetencia, y Jim sabotea el juego adivinando mal a propósito para burlarse.",
+      "nodos": [
+        {
+          "id": "Michael",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Jim",
+          "emocion": "Joy"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Michael",
+          "destino": "Jim",
+          "relacion": "Grita (frustración)"
+        },
+        {
+          "origen": "Jim",
+          "destino": "Michael",
+          "relacion": "Bromea/Sabotea"
+        },
+        {
+          "origen": "Jan",
+          "destino": "Michael",
+          "relacion": "Controla/Corrige"
+        }
+      ]
+    }
+  ]
+}

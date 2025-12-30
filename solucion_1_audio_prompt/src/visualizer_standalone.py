@@ -1,22 +1,27 @@
+import os
+import json
+import shutil
 import networkx as nx
 import matplotlib.pyplot as plt
-import os
 import imageio.v2 as imageio
-import shutil
 
-# --- CONFIGURACIÓN DE ESTILO ---
+# --- CONFIGURACIÓN DE RUTAS ---
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUTPUT_DIR = os.path.join(BASE_DIR, "output")
+
+# --- ESTILO VISUAL (Minimalista Recto) ---
 NODE_ACTIVE_BG = '#FFFFFF'
 NODE_INACTIVE_BG = '#F5F5F5'
 NODE_BORDER = '#000000'
-EDGE_COLOR = '#000000'
 
-def generar_video_evolutivo(datos, output_folder, nombre_salida="video_evolucion"):
+def generar_video_evolutivo(ruta_json):
+    print(f"🎥 Generando video para: {os.path.basename(ruta_json)}...")
+    
+    with open(ruta_json, 'r', encoding='utf-8') as f:
+        datos = json.load(f)
+
     timeline = datos.get("timeline", [])
-    if not timeline:
-        print("⚠️ No hay timeline.")
-        return
-
-    print(f"🎥 Generando video (Flechas Rectas Visibles)...")
+    if not timeline: return print("⚠️ JSON sin timeline.")
 
     # 1. CENSO Y ORDENACIÓN
     todos_personajes = set()
@@ -26,7 +31,7 @@ def generar_video_evolutivo(datos, output_folder, nombre_salida="video_evolucion
             todos_personajes.add(a['origen'])
             todos_personajes.add(a['destino'])
             
-    if not todos_personajes: return
+    if not todos_personajes: return print("⚠️ No hay personajes.")
 
     lista_personajes = sorted(list(todos_personajes))
 
@@ -36,7 +41,7 @@ def generar_video_evolutivo(datos, output_folder, nombre_salida="video_evolucion
     pos_fija = nx.circular_layout(G_global, scale=0.85) 
 
     # Carpeta temporal
-    temp_dir = os.path.join(output_folder, "temp_frames")
+    temp_dir = os.path.join(OUTPUT_DIR, "temp_frames")
     if os.path.exists(temp_dir): shutil.rmtree(temp_dir)
     os.makedirs(temp_dir, exist_ok=True)
     
@@ -65,19 +70,13 @@ def generar_video_evolutivo(datos, output_folder, nombre_salida="video_evolucion
                 colores_fondo.append(NODE_INACTIVE_BG)
                 labels_nodos[p] = p
 
-        # Dibujamos nodos
-        # IMPORTANTE: Guardamos el tamaño en una variable para usarla luego
-        TAMANO_NODO = 4800 
         nx.draw_networkx_nodes(
-            G_frame, pos_fija, 
-            node_size=TAMANO_NODO, 
-            node_color=colores_fondo, 
-            edgecolors=NODE_BORDER, 
-            linewidths=1.5
+            G_frame, pos_fija, node_size=4800, 
+            node_color=colores_fondo, edgecolors=NODE_BORDER, linewidths=1.5
         )
         nx.draw_networkx_labels(G_frame, pos_fija, labels=labels_nodos, font_size=8, font_weight="bold")
 
-        # B. PROCESAR ARISTAS
+        # B. ARISTAS (Lógica de agrupación <->)
         interacciones = {}
         for a in fase.get("aristas", []):
             u, v = a['origen'], a['destino']
@@ -94,49 +93,36 @@ def generar_video_evolutivo(datos, output_folder, nombre_salida="video_evolucion
         for pair, lista in interacciones.items():
             u, v = list(pair)[0], list(pair)[-1]
             
-            # Caso Unidireccional
+            # Unidireccional
             if len(lista) == 1 or (len(lista) > 1 and all(x['origen'] == lista[0]['origen'] for x in lista)):
                 item = lista[0]
                 aristas_uni.append((item['origen'], item['destino']))
                 labels_uni[(item['origen'], item['destino'])] = item['relacion']
-            
-            # Caso Bidireccional
+            # Bidireccional
             else:
                 rel_u_v = next((x['relacion'] for x in lista if x['origen'] == u), "")
                 rel_v_u = next((x['relacion'] for x in lista if x['origen'] == v), "")
                 aristas_bi.append((u, v))
                 labels_bi[(u, v)] = f"{rel_u_v} / {rel_v_u}".strip(" / ")
 
-        # C. DIBUJAR ARISTAS (CORREGIDO)
-        
-        # 1. Unidireccionales (->)
+        # Dibujar Unidireccionales
         if aristas_uni:
             nx.draw_networkx_edges(
-                G_frame, pos_fija,
-                edgelist=aristas_uni,
-                width=1.5,
-                edge_color='black',
-                arrowsize=25,       # Flecha más grande
-                arrowstyle='-|>',   # Punta rellena
-                node_size=TAMANO_NODO, # ¡CLAVE! Para que la flecha no se meta dentro del nodo
-                connectionstyle="arc3,rad=0"
+                G_frame, pos_fija, edgelist=aristas_uni, width=1.5,
+                edge_color='black', arrowsize=25, arrowstyle='-|>',
+                node_size=4800, connectionstyle="arc3,rad=0"
             )
             nx.draw_networkx_edge_labels(
                 G_frame, pos_fija, edge_labels=labels_uni, font_size=7,
                 bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="black", lw=0.5)
             )
 
-        # 2. Bidireccionales (<->)
+        # Dibujar Bidireccionales
         if aristas_bi:
             nx.draw_networkx_edges(
-                G_frame, pos_fija,
-                edgelist=aristas_bi,
-                width=1.5,
-                edge_color='black',
-                arrowsize=25,        # Flecha más grande
-                arrowstyle='<|-|>',  # Doble punta rellena
-                node_size=TAMANO_NODO, # ¡CLAVE! Para que las puntas se vean
-                connectionstyle="arc3,rad=0"
+                G_frame, pos_fija, edgelist=aristas_bi, width=1.5,
+                edge_color='black', arrowsize=25, arrowstyle='<|-|>',
+                node_size=4800, connectionstyle="arc3,rad=0"
             )
             nx.draw_networkx_edge_labels(
                 G_frame, pos_fija, edge_labels=labels_bi, font_size=7,
@@ -144,18 +130,35 @@ def generar_video_evolutivo(datos, output_folder, nombre_salida="video_evolucion
             )
 
         plt.axis('off')
-        
         filename = os.path.join(temp_dir, f"frame_{i}.png")
-        plt.savefig(filename, dpi=100) 
+        plt.savefig(filename, dpi=100)
         plt.close()
         filenames.append(filename)
 
     # GIF
     if filenames:
-        ruta_gif = os.path.join(output_folder, f"{nombre_salida}.gif")
+        nombre_gif = os.path.basename(ruta_json).replace('.json', '.gif')
+        ruta_gif = os.path.join(OUTPUT_DIR, nombre_gif)
         print("🎞️  Renderizando GIF...")
         with imageio.get_writer(ruta_gif, mode='I', duration=3000, loop=0) as writer:
             for filename in filenames:
                 writer.append_data(imageio.imread(filename))
         shutil.rmtree(temp_dir)
         print(f"✅ Video guardado en: {ruta_gif}")
+
+def main():
+    # Listar JSONs
+    archivos = [f for f in os.listdir(OUTPUT_DIR) if f.endswith('.json')]
+    if not archivos: return print("❌ No hay JSONs en output/")
+    
+    print("\n--- 📊 SELECCIONA JSON PARA VISUALIZAR ---")
+    for i, f in enumerate(archivos): print(f"[{i+1}] {f}")
+    
+    try:
+        idx = int(input("👉 Número: ")) - 1
+        generar_video_evolutivo(os.path.join(OUTPUT_DIR, archivos[idx]))
+    except ValueError:
+        print("❌ Número inválido")
+
+if __name__ == "__main__":
+    main()

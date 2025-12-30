@@ -1,0 +1,111 @@
+{
+  "resumen_global": "The audio depicts a rapidly deteriorating social gathering characterized by extreme awkwardness and toxic interpersonal dynamics. It moves from forced formality (Neutral/Surprise) to psychological warfare (Disgust), culminating in a manic outburst (Anger) triggered by a game of charades. The protagonist, Michael, oscillates between desperate people-pleasing and explosive frustration, while the guests attempt to escape the discomfort.",
+  "timeline": [
+    {
+      "fase": "Forced Sophistication",
+      "descripcion": "The party begins with an awkward toast and uncomfortable music. Jan displays narcissistic behavior while the guests cringe.",
+      "nodos": [
+        {
+          "id": "Michael",
+          "emocion": "Fear"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Joy"
+        },
+        {
+          "id": "Guests",
+          "emocion": "Disgust"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jan",
+          "destino": "Guests",
+          "relacion": "Imposes music"
+        },
+        {
+          "origen": "Michael",
+          "destino": "Jan",
+          "relacion": "Submits"
+        }
+      ]
+    },
+    {
+      "fase": "The Escape Attempt",
+      "descripcion": "Jim invents a fake emergency to leave. Michael realizes he is being abandoned with Jan and begs them to stay.",
+      "nodos": [
+        {
+          "id": "Jim",
+          "emocion": "Joy"
+        },
+        {
+          "id": "Michael",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Pam",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jim",
+          "destino": "Michael",
+          "relacion": "Deceives (Flooded apartment)"
+        },
+        {
+          "origen": "Michael",
+          "destino": "Jim",
+          "relacion": "Pleads"
+        }
+      ]
+    },
+    {
+      "fase": "Competitive Meltdown",
+      "descripcion": "During charades, Jim intentionally sabotages Michael's turn. Michael's frustration boils over into screaming anger.",
+      "nodos": [
+        {
+          "id": "Michael",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Jim",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Anger"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jim",
+          "destino": "Michael",
+          "relacion": "Sabotages (Wrong guesses)"
+        },
+        {
+          "origen": "Michael",
+          "destino": "Jim",
+          "relacion": "Screams"
+        },
+        {
+          "origen": "Jan",
+          "destino": "Michael",
+          "relacion": "Criticizes"
+        }
+      ]
+    },
+    {
+      "fase": "Office Ambience",
+      "descripcion": "A hard cut to the mundane sounds of the workplace, contrasting with the chaos of the party.",
+      "nodos": [
+        {
+          "id": "Office Environment",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": []
+    }
+  ]
+}

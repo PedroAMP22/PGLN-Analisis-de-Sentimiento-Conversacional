@@ -1,0 +1,104 @@
+{
+  "resumen_global": "The audio captures a catastrophic emotional breakdown between two partners (Nicole and Charlie). It follows a clear trajectory: starting with high-tension reciprocal Blame (Anger), escalating into vicious character assassination and expression of hatred (Disgust/Anger), peaking with a verbal wish for death, and abruptly collapsing into immediate regret and shared grief (Sadness). The scene demonstrates how extreme Anger can instantly morph into Sadness once the verbal violence exceeds the participants' moral thresholds.",
+  "timeline": [
+    {
+      "fase": "Reciprocal Accusation",
+      "descripcion": "The argument begins with rapid-fire exchanges about professional jealousy, gaslighting, and selfishness. Both parties feel victimized.",
+      "nodos": [
+        {
+          "id": "Nicole",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Charlie",
+          "emocion": "Anger"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Accuses of gaslighting"
+        },
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Devalues professional talent"
+        }
+      ]
+    },
+    {
+      "fase": "Character Assassination",
+      "descripcion": "The conflict moves from specific grievances to attacking each other's core identity. Disgust mixes with anger as they insult each other's nature.",
+      "nodos": [
+        {
+          "id": "Nicole",
+          "emocion": "Disgust"
+        },
+        {
+          "id": "Charlie",
+          "emocion": "Disgust"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Insults ('You're a dick')"
+        },
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Mocks identity ('You're merged with your selfishness')"
+        }
+      ]
+    },
+    {
+      "fase": "The Breaking Point",
+      "descripcion": "Charlie loses all control, screaming that he wishes Nicole were dead. This is the peak of intensity.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Fear"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Verbal violence (Death wish)"
+        }
+      ]
+    },
+    {
+      "fase": "Collapse and Comfort",
+      "descripcion": "Realizing the horror of his words, Charlie breaks down into sobbing. The aggression vanishes, replaced by profound sorrow. Nicole comforts him.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Apologizes"
+        },
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Consoles"
+        }
+      ]
+    }
+  ]
+}

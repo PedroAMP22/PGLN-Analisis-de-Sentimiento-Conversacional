@@ -1,0 +1,135 @@
+{
+  "resumen_global": "La escena presenta una discusión conyugal altamente volátil (identificada como una escena de 'Marriage Story') entre dos personajes, Nicole y Charlie. La interacción comienza con recriminaciones profesionales y personales, escala rápidamente a insultos sobre sus caracteres, revelaciones de infidelidad y resentimiento por las decisiones de vida tomadas. El conflicto alcanza su punto máximo cuando Charlie expresa verbalmente el deseo de que Nicole muera, lo que provoca un colapso emocional inmediato en él, pasando de la ira extrema a la tristeza profunda, finalizando con Nicole consolándolo.",
+  "timeline": [
+    {
+      "fase": "Inicio de las Hostilidades",
+      "descripcion": "Intercambio rápido de insultos sobre competencias profesionales y manipulación psicológica (gaslighting).",
+      "nodos": [
+        {
+          "id": "Nicole",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Charlie",
+          "emocion": "Anger"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Acusa de egoísmo y manipulación"
+        },
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Insulta habilidades profesionales (Hack)"
+        }
+      ]
+    },
+    {
+      "fase": "Justificación y Resentimiento",
+      "descripcion": "La discusión se centra en la infidelidad y la falta de intimidad. Charlie justifica sus acciones basándose en su infelicidad.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Disgust"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Anger"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Culpa por falta de intimidad"
+        },
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Cuestiona moralidad y amor"
+        }
+      ]
+    },
+    {
+      "fase": "Estallido de Ira",
+      "descripcion": "Charlie grita sobre sus sacrificios personales y su arrepentimiento por el matrimonio. Nicole ataca su ego.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Disgust"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Expresa arrepentimiento por casarse"
+        },
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Denigra su carácter (fusión con egoísmo)"
+        }
+      ]
+    },
+    {
+      "fase": "Violencia Verbal Extrema",
+      "descripcion": "Charlie pierde el control total y desea la muerte de Nicole explícitamente.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Fear"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Desea la muerte"
+        },
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Observa en shock"
+        }
+      ]
+    },
+    {
+      "fase": "Colapso y Consuelo",
+      "descripcion": "Charlie se derrumba al darse cuenta de lo que dijo. El conflicto cesa abruptamente y da paso al duelo compartido.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Charlie",
+          "relacion": "Llora/Colapsa"
+        },
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Consuela"
+        }
+      ]
+    }
+  ]
+}

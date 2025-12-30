@@ -1,0 +1,114 @@
+{
+  "resumen_global": "El audio (~4:04) contiene una conversación principalmente entre 2 voces (dos interlocutores). La detección acústica por ventanas sugiere alternancia de turnos y que la conversación la inicia la Voz_A al comienzo; la Voz_B entra después y responde/continúa. La transcripción offline disponible es incompleta y ruidosa (varias frases se entienden solo parcialmente), pero aparecen marcadores conversacionales en inglés como “how is that…”, “yeah…”, y hacia el final algo como “hello hi I’m Brian…”, además de un cierre con tono de apoyo tipo “don’t lose hope…”. A nivel de prosodia, lo que se aprecia por dinámica general es un volumen mayormente moderado (sin picos prolongados típicos de gritos), con momentos de énfasis puntuales; el tono global parece conversacional y más reflexivo que confrontativo. Por coherencia tono-contenido: en la primera mitad predomina un intercambio neutro/reflexivo; en la parte final hay señales de cierre/introducción y una frase de ánimo, compatible con un matiz más positivo o de contención.",
+  "timeline": [
+    {
+      "fase": "Apertura y planteamiento",
+      "descripcion": "Inicio del diálogo. La Voz_A abre con un planteamiento tipo pregunta/encuadre (se oye algo cercano a “how is that…”), en un estilo conversacional y reflexivo.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "pregunta"
+        },
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "escucha"
+        }
+      ]
+    },
+    {
+      "fase": "Desarrollo: intercambio y detalles personales",
+      "descripcion": "Se intensifica el intercambio (aparecen varios “yeah…”). Se mencionan referencias tipo familia/relaciones (“sister…”, “aunt…” aparecen de forma imperfecta en la transcripción), manteniendo un tono más bien neutro.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "responde"
+        },
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "explica"
+        }
+      ]
+    },
+    {
+      "fase": "Bloque de mayor tensión/énfasis",
+      "descripcion": "Hay pasajes con más énfasis y contenido menos claro (la transcripción arroja fragmentos confusos como “tear gas…”/“donate…” que podrían ser errores). Aun así, la prosodia sugiere un momento de mayor activación (énfasis) sin llegar a explosión sostenida.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Fear"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "insiste"
+        },
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "aclara"
+        }
+      ]
+    },
+    {
+      "fase": "Cierre e introducción/apoyo",
+      "descripcion": "Tramo final con señales de cierre/introducción (“hello hi I’m Brian…”, según transcripción parcial) y una frase de ánimo tipo “don’t lose hope…”, coherente con un tono más contenedor.",
+      "nodos": [
+        {
+          "id": "Voz_A",
+          "emocion": "Joy"
+        },
+        {
+          "id": "Voz_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "saluda"
+        },
+        {
+          "origen": "Voz_A",
+          "destino": "Voz_B",
+          "relacion": "anima"
+        },
+        {
+          "origen": "Voz_B",
+          "destino": "Voz_A",
+          "relacion": "cierra"
+        }
+      ]
+    }
+  ]
+}

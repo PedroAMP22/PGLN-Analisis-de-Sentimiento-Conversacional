@@ -1,0 +1,192 @@
+{
+  "resumen_global": "In a ~4-minute office conversation, two main speakers dominate: Speaker_A (more frequent/higher-energy turns, ~103s total speech) and Speaker_B (longer complaint/explanation blocks, ~66s). A third voice/noise source (Speaker_C, ~16s) appears in brief interjections. The interaction pattern suggests Speaker_B presents a concern or grievance, Speaker_A responds more assertively and then closes with a longer wrap-up/next-steps segment.",
+  "timeline": [
+    {
+      "fase": "Start",
+      "descripcion": "0:00–0:29. Rapid back-and-forth between Speaker_A and Speaker_B, with a brief interjection from Speaker_C; tone generally low-to-moderate arousal, establishing context.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_C",
+          "emocion": "Surprise"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Asks"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Answers"
+        },
+        {
+          "origen": "Speaker_C",
+          "destino": "Speaker_A",
+          "relacion": "Interrupts"
+        }
+      ]
+    },
+    {
+      "fase": "Issue Presentation",
+      "descripcion": "0:29–1:18. Speaker_B delivers a long uninterrupted explanation/complaint while Speaker_A largely listens.",
+      "nodos": [
+        {
+          "id": "Speaker_B",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Explains"
+        },
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Acknowledges"
+        }
+      ]
+    },
+    {
+      "fase": "Clarification",
+      "descripcion": "1:18–1:33. Interaction becomes more segmented: Speaker_C appears in short interjections while Speaker_A begins responding and Speaker_B briefly continues.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Speaker_C",
+          "emocion": "Surprise"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_C",
+          "destino": "Speaker_B",
+          "relacion": "Interrupts"
+        },
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Clarifies"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Justifies"
+        }
+      ]
+    },
+    {
+      "fase": "Response / Boundary-setting",
+      "descripcion": "1:33–2:03. Speaker_A dominates with longer, more energetic turns (higher arousal prosody), consistent with a firm response or setting expectations; Speaker_B is mostly quiet in this window.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Challenges"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Defends"
+        }
+      ]
+    },
+    {
+      "fase": "Negotiation",
+      "descripcion": "2:03–2:42. Shorter alternating contributions from Speaker_B and Speaker_C, with Speaker_A briefly re-entering; pattern suggests clarification, negotiation, or mediation.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Speaker_C",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Negotiates"
+        },
+        {
+          "origen": "Speaker_C",
+          "destino": "Speaker_A",
+          "relacion": "Clarifies"
+        },
+        {
+          "origen": "Speaker_C",
+          "destino": "Speaker_B",
+          "relacion": "Mediates"
+        }
+      ]
+    },
+    {
+      "fase": "Closure",
+      "descripcion": "2:42–3:48. Speaker_A speaks almost continuously with the highest average intensity in the recording, consistent with summarizing decisions and next steps; other speakers are largely silent.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_C",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Concludes"
+        },
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_C",
+          "relacion": "Assigns"
+        }
+      ]
+    }
+  ]
+}

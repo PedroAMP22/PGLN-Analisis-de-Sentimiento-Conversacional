@@ -1,0 +1,104 @@
+{
+  "resumen_global": "Audio (~4:04) suggests 2 recurring speakers (Speaker1 and Speaker2). Turn-taking patterns indicate: Speaker1 opens, Speaker2 delivers a longer briefing around 00:30–01:00, then a mostly Speaker1-led discussion, with higher vocal intensity near the end. Emotions below are inferred from prosody (energy/pitch/voice dynamics) rather than lexical content; no word-level transcription was available.",
+  "timeline": [
+    {
+      "fase": "Start",
+      "descripcion": "00:00–00:30. Opening exchanges; brief back-and-forth before a longer single-speaker stretch.",
+      "nodos": [
+        {
+          "id": "Speaker1",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker2",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker1",
+          "destino": "Speaker2",
+          "relacion": "Greets/asks"
+        },
+        {
+          "origen": "Speaker2",
+          "destino": "Speaker1",
+          "relacion": "Replies"
+        }
+      ]
+    },
+    {
+      "fase": "Briefing",
+      "descripcion": "00:30–01:00. Speaker2 dominates with a sustained monologue; Speaker1 appears to listen.",
+      "nodos": [
+        {
+          "id": "Speaker1",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker2",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker2",
+          "destino": "Speaker1",
+          "relacion": "Briefs/explains"
+        }
+      ]
+    },
+    {
+      "fase": "Discussion",
+      "descripcion": "01:00–03:00. Alternating turns, but Speaker1 holds most floor time rememberably; conversational back-and-forth resumes.",
+      "nodos": [
+        {
+          "id": "Speaker1",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker2",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker2",
+          "destino": "Speaker1",
+          "relacion": "Raises points"
+        },
+        {
+          "origen": "Speaker1",
+          "destino": "Speaker2",
+          "relacion": "Responds/discusses"
+        }
+      ]
+    },
+    {
+      "fase": "Escalation",
+      "descripcion": "03:00–04:04. Noticeable rise in intensity dominated by Speaker1; Speaker2 contributes briefly.",
+      "nodos": [
+        {
+          "id": "Speaker1",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Speaker2",
+          "emocion": "Surprise"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker1",
+          "destino": "Speaker2",
+          "relacion": "Confronts"
+        },
+        {
+          "origen": "Speaker2",
+          "destino": "Speaker1",
+          "relacion": "Clarifies/defends"
+        }
+      ]
+    }
+  ]
+}

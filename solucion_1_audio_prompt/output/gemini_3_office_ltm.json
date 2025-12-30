@@ -1,0 +1,129 @@
+{
+  "resumen_global": "La escena retrata una cena extremadamente incómoda y disfuncional organizada por Michael y Jan. Comienza con tensión social exacerbada por música inapropiada y comentarios pasivo-agresivos de Jan hacia Pam. La tensión escala durante un juego de adivinanzas (charadas), donde la naturaleza controladora y volátil de Jan sale a la luz, acusando a los invitados de burlarse. Jim intenta fabricar una emergencia para escapar con Pam, pero son bloqueados por los anfitriones. La escena culmina con Michael fallando bajo la presión de las reglas tiránicas de Jan durante el juego.",
+  "timeline": [
+    {
+      "fase": "Incomodidad Inicial",
+      "descripcion": "Michael y Jan hacen un brindis incómodo. Jan pone una canción sugerente de su ex-asistente, creando un ambiente extraño. Jan insulta sutilmente la ética laboral de Pam bajo la apariencia de una conversación casual.",
+      "nodos": [
+        {
+          "id": "Michael",
+          "emocion": "Happiness"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Happiness"
+        },
+        {
+          "id": "Jim",
+          "emocion": "Disgust"
+        },
+        {
+          "id": "Pam",
+          "emocion": "Surprise"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jan",
+          "destino": "Pam",
+          "relacion": "Menosprecia (Pasivo-agresiva)"
+        },
+        {
+          "origen": "Jim",
+          "destino": "Jan",
+          "relacion": "Observa con incredulidad"
+        }
+      ]
+    },
+    {
+      "fase": "Competencia y Paranoia",
+      "descripcion": "El grupo juega a las charadas. Michael y Jan ganan la primera ronda y celebran excesivamente. Jan confronta agresivamente a Jim, acusándolo de reírse de ellos, revelando su profunda inseguridad y hostilidad.",
+      "nodos": [
+        {
+          "id": "Michael",
+          "emocion": "Happiness"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Jim",
+          "emocion": "Fear"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Michael",
+          "destino": "Jan",
+          "relacion": "Celebra victoria"
+        },
+        {
+          "origen": "Jan",
+          "destino": "Jim",
+          "relacion": "Acusa de burla"
+        }
+      ]
+    },
+    {
+      "fase": "Intento de Fuga Fallido",
+      "descripcion": "Jim finge recibir una llamada sobre una inundación en su apartamento para irse. Michael y Jan manipulan la situación para evitar que se vayan, atrapándolos de nuevo en la cena.",
+      "nodos": [
+        {
+          "id": "Jim",
+          "emocion": "Fear"
+        },
+        {
+          "id": "Pam",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Michael",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Contempt"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jim",
+          "destino": "Michael",
+          "relacion": "Miente sobre emergencia"
+        },
+        {
+          "origen": "Jan",
+          "destino": "Jim",
+          "relacion": "Bloquea salida"
+        }
+      ]
+    },
+    {
+      "fase": "Colapso del Juego",
+      "descripcion": "El juego se reanuda. Michael intenta describir a Katie Holmes pero se pone nervioso y rompe las reglas al rimar. Jan le grita furiosa por romper las reglas, provocando que Michael entre en pánico y se rinda.",
+      "nodos": [
+        {
+          "id": "Michael",
+          "emocion": "Fear"
+        },
+        {
+          "id": "Jan",
+          "emocion": "Anger"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Jan",
+          "destino": "Michael",
+          "relacion": "Grita/Regaña"
+        },
+        {
+          "origen": "Michael",
+          "destino": "Jan",
+          "relacion": "Pide clemencia/Pasa turno"
+        }
+      ]
+    }
+  ]
+}

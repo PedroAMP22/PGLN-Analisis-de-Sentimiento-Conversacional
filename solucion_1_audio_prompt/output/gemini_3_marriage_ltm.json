@@ -1,0 +1,83 @@
+{
+  "resumen_global": "La escena presenta una discusión visceral y creciente entre una pareja, Nicole y Charlie, durante su proceso de divorcio. Comienza con acusaciones mutuas sobre egoísmo profesional y manipulación emocional, escalando rápidamente a insultos sobre sus capacidades artísticas y elecciones de vida. El conflicto alcanza un clímax destructivo cuando Charlie, en un ataque de ira, grita que desearía que Nicole estuviera muerta. Inmediatamente después, abrumado por sus propias palabras, Charlie colapsa en llanto y arrepentimiento, lo que lleva a Nicole a consolarlo, terminando la escena en un estado de profunda tristeza compartida.",
+  "timeline": [
+    {
+      "fase": "Escalada de Acusaciones",
+      "descripcion": "Intercambio rápido de insultos personales y profesionales. Se atacan mutuamente sobre sus habilidades artísticas ('hack', 'bad acting') y se culpan por el estado de su matrimonio y ubicación geográfica (LA vs NY).",
+      "nodos": [
+        {
+          "id": "Nicole",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Charlie",
+          "emocion": "Contempt"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Acusa de manipulación (gaslighting)"
+        },
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Menosprecia profesionalmente"
+        }
+      ]
+    },
+    {
+      "fase": "Estallido Emocional",
+      "descripcion": "Charlie pierde el control total. Grita sobre su falta de libertad en los 20s y su fidelidad, culminando en un grito visceral deseando la muerte de Nicole. Nicole pasa de la defensa a la conmoción.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Surprise"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Desea la muerte verbalmente"
+        },
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Observa con incredulidad"
+        }
+      ]
+    },
+    {
+      "fase": "Colapso y Arrepentimiento",
+      "descripcion": "La realidad de las palabras dichas rompe la ira. Charlie cae al suelo llorando. Nicole se acerca suavemente para consolarlo. Ambos se disculpan tácita o explícitamente.",
+      "nodos": [
+        {
+          "id": "Charlie",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Nicole",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Charlie",
+          "destino": "Nicole",
+          "relacion": "Pide perdón"
+        },
+        {
+          "origen": "Nicole",
+          "destino": "Charlie",
+          "relacion": "Consuela físicamente"
+        }
+      ]
+    }
+  ]
+}

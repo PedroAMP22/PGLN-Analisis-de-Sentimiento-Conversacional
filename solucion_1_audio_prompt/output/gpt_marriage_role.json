@@ -1,0 +1,161 @@
+{
+  "resumen_global": "El audio muestra una interacción principalmente entre dos voces. Speaker_A domina el tiempo de palabra (aprox. 80% del habla detectada) y tiende a sostener turnos largos; Speaker_B interviene con turnos más cortos y aumenta su participación en el tramo central. La tensión prosódica (mayor energía y alternancia de turnos) se concentra sobre todo entre ~1:00 y ~2:00, con un pico alrededor de ~1:30–2:00. Después, Speaker_A vuelve a tomar el control del intercambio y el cierre es más calmado.",
+  "timeline": [
+    {
+      "fase": "Inicio",
+      "descripcion": "0:00–0:30. Apertura con Speaker_A llevando el ritmo y marcando el tema; Speaker_B responde de forma breve.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Asks"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Answers"
+        }
+      ]
+    },
+    {
+      "fase": "Planteamiento",
+      "descripcion": "0:30–1:00. Speaker_B inicia un punto/argumento y Speaker_A toma el rol de ordenar/precisar, manteniendo un tono mayormente controlado.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Explains"
+        },
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Clarifies"
+        }
+      ]
+    },
+    {
+      "fase": "Escalada",
+      "descripcion": "1:00–1:30. Aumentan la energía vocal y la frecuencia de turnos; se percibe fricción y defensividad, con Speaker_A empujando el intercambio.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Sadness"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Challenges"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Defends"
+        }
+      ]
+    },
+    {
+      "fase": "Pico de conflicto",
+      "descripcion": "1:30–2:00. Tramo más equilibrado en participación y el de mayor intensidad relativa; dinámica de confrontación directa con posibles interrupciones/replicas rápidas.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Anger"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Anger"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Accuses"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Counters"
+        }
+      ]
+    },
+    {
+      "fase": "Desescalada",
+      "descripcion": "2:00–2:30. Disminuye la intensidad; Speaker_A sostiene más el turno (tipo resumen/posicionamiento) mientras Speaker_B participa poco.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Sadness"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Summarizes"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Concedes"
+        }
+      ]
+    },
+    {
+      "fase": "Cierre",
+      "descripcion": "2:30–2:48. Final más bajo en energía y con intervenciones breves; se cierra la interacción sin nueva escalada.",
+      "nodos": [
+        {
+          "id": "Speaker_A",
+          "emocion": "Neutral"
+        },
+        {
+          "id": "Speaker_B",
+          "emocion": "Neutral"
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "Speaker_A",
+          "destino": "Speaker_B",
+          "relacion": "Concludes"
+        },
+        {
+          "origen": "Speaker_B",
+          "destino": "Speaker_A",
+          "relacion": "Acknowledges"
+        }
+      ]
+    }
+  ]
+}

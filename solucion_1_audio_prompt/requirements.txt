@@ -1,4 +1,6 @@
-google-generativeai
+google-genai
 python-dotenv
 networkx
 matplotlib
+json_repair
+imageio
