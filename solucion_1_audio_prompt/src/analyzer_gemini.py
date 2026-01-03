@@ -6,29 +6,29 @@ from google.genai import types
 from dotenv import load_dotenv
 from json_repair import repair_json
 
-# Cargar entorno
+#cargamos entorno para la api-key
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
 
 if not api_key:
-    print("❌ ERROR: Falta GOOGLE_API_KEY en .env")
+    print("ERROR: Falta GOOGLE_API_KEY en .env")
     exit()
 
-# Cliente Nueva Generación
+#cliente
 client = genai.Client(api_key=api_key)
 
-# --- CONFIGURACIÓN ---
+#configuracion de paths
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 INPUT_DIR = os.path.join(BASE_DIR, "input")
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# MODELO: Gemini 3 Pro (El más potente)
+#modelo al que se hace la peticion
 #MODEL_NAME = "gemini-2.5-flash"
 MODEL_NAME = "gemini-3-pro-preview"
 
 def get_prompt_by_strategy(strategy_id):
-    # Esta estructura JSON es común para todos, la inyectamos al final
+    #esta es la estructura que ponemos como ejemplo en cada uno de los prompts del JSON
     json_structure = """
     JSON STRUCTURE:
     {
@@ -48,8 +48,7 @@ def get_prompt_by_strategy(strategy_id):
     }
     """
 
-    # --- ESTRATEGIA 1: Zero-shot + Role (Baseline) ---
-    # Copiado literal del prompt manual
+    #zero-shot + role
     if strategy_id == 1:
         return f"""
         ROLE: Act as an expert Psychologist and Data Scientist specializing in social dynamics.
@@ -61,8 +60,7 @@ def get_prompt_by_strategy(strategy_id):
         {json_structure}
         """
 
-    # --- ESTRATEGIA 2: Chain-of-Thought (Razonamiento) ---
-    # Copiado literal del prompt manual
+    #CoT
     if strategy_id == 2:
         return f"""
         Analyze the attached audio following a step-by-step reasoning process (Chain of Thought).
@@ -80,8 +78,7 @@ def get_prompt_by_strategy(strategy_id):
         {json_structure}
         """
 
-    # --- ESTRATEGIA 3: Least-to-Most (Descomposición) ---
-    # Copiado literal del prompt manual
+    #Least-to-Most
     return f"""
     You will solve this analysis by breaking it down into sub-problems.
 
@@ -98,44 +95,44 @@ def get_prompt_by_strategy(strategy_id):
     """
 
 def main():    
-    # Seleccionar Audio
-    if not os.path.exists(INPUT_DIR): return print(f"❌ No existe: {INPUT_DIR}")
+    #seleccion del audio local
+    if not os.path.exists(INPUT_DIR): return print(f"No existe: {INPUT_DIR}")
     archivos = [f for f in os.listdir(INPUT_DIR) if f.endswith(('.mp3', '.wav', '.ogg', '.m4a'))]
-    if not archivos: return print("❌ Sin audios")
+    if not archivos: return print("Sin audios")
         
     for i, f in enumerate(archivos): print(f"[{i+1}] {f}")
     
     try:
-        idx = int(input("👉 Audio: ")) - 1
+        idx = int(input("Audio: ")) - 1
         ruta_audio = os.path.join(INPUT_DIR, archivos[idx])
-    except: return print("❌ Selección inválida.")
+    except: return print("Selección inválida.")
 
-    # Seleccionar Estrategia
+    #menu para seleccionar el prompt con el que queremos probar permite elegir entre las 3 opciones
     print("\n1. Zero-Shot (R-T-F) | 2. CoT | 3. LtM")
     try:
-        strat = int(input("👉 Estrategia: "))
+        strat = int(input("Estrategia: "))
         prompt = get_prompt_by_strategy(strat)
     except: return
 
-    # Procesar
-    print(f"\n📤 Subiendo a Google AI (Nueva API)...")
+    #procesar la peticion
+    print(f"\nSubiendo a Google AI (Nueva API)...")
     try:
-        # 1. Subir archivo
+        #primero subimos el archivo con el cliente
         archivo_nube = client.files.upload(file=ruta_audio)
         
-        print("⏳ Procesando audio...", end="", flush=True)
+        print("Procesando audio...", end="", flush=True)
         while archivo_nube.state.name == "PROCESSING":
             print(".", end="", flush=True)
             time.sleep(2)
             archivo_nube = client.files.get(name=archivo_nube.name)
-        print(" ✅ Listo.")
+        print("Listo.")
 
         if archivo_nube.state.name == "FAILED":
             raise Exception("Google falló al procesar el audio.")
 
-        print(f"\n🧠 Analizando con {MODEL_NAME}...")
+        print(f"\nAnalizando con {MODEL_NAME}...")
         
-        # 2. Generar contenido
+        #generamos el contenido
         response = client.models.generate_content(
             model=MODEL_NAME,
             contents=[
@@ -150,14 +147,14 @@ def main():
                 )
             ],
             config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                temperature=0.2
+                response_mime_type="application/json", #tipo de respuesta
+                temperature=0.2 #temperatura del modelo
             )
         )
         
-        # 3. Guardar
+        #guardamos y reparamos en caso de json mal formateados
         data = json.loads(repair_json(response.text))
-        
+        #establecemos el nombre del json de salida generado
         nombre_clean = archivos[idx].split('.')[0].replace(" ", "_")
         out_path = os.path.join(OUTPUT_DIR, f"gemini3_{nombre_clean}_strat{strat}.json")
         
@@ -167,9 +164,9 @@ def main():
         print(f"✅ Guardado: {out_path}")
         
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\nError: {e}")
     finally:
-        # Limpieza (opcional, Google borra a los 2 días, pero mejor limpiar)
+        #limpiamos aunque gogle ya lo borra a los 2 dias
         if 'archivo_nube' in locals():
             try:
                 client.files.delete(name=archivo_nube.name)

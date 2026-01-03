@@ -1,0 +1,48 @@
+{
+    "resumen_global": "The conversation revolves around personal and professional conflicts, with accusations and defensiveness.",
+    "timeline": [
+        {
+            "fase": "Introduction",
+            "descripcion": "The speaker expresses surprise and frustration about past interactions.",
+            "nodos": [
+                {
+                    "id": "SpeakerA",
+                    "emocion": "Sadness"
+                }
+            ],
+            "aristas": [
+                {
+                    "origen": "SpeakerA",
+                    "destino": "SpeakerB",
+                    "relacion": "Asks"
+                }
+            ]
+        },
+        {
+            "fase": "Accusations",
+            "descripcion": "One speaker accuses the other of being selfish and using the other for personal gain.",
+            "nodos": [
+                {
+                    "id": "SpeakerA",
+                    "emocion": "Angry"
+                },
+                {
+                    "id": "SpeakerB",
+                    "emocion": "Defensive"
+                }
+            ],
+            "aristas": [
+                {
+                    "origen": "SpeakerA",
+                    "destino": "SpeakerB",
+                    "relacion": "Accuses"
+                },
+                {
+                    "origen": "SpeakerB",
+                    "destino": "SpeakerA",
+                    "relacion": "Defends"
+                }
+            ]
+        }
+    ]
+}

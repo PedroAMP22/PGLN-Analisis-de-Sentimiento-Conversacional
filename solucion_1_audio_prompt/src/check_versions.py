@@ -9,9 +9,9 @@ print(f"✅ BitsAndBytes version: {bnb.__version__}")
 print(f"✅ Transformers version: {transformers.__version__}")
 print(f"✅ Accelerate version: {accelerate.__version__}")
 
-# Comprobación específica del error que tenías
+#comprobacion de librerias
 try:
     from transformers.utils.quantization_config import BitsAndBytesConfig
     print("✅ BitsAndBytesConfig importado correctamente.")
 except ImportError as e:
-    print(f"❌ Error importando config: {e}")
+    print(f"Error importando config: {e}")

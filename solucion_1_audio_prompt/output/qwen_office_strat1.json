@@ -1,0 +1,44 @@
+{
+    "resumen_global": "Generated from fragmented list",
+    "timeline": [
+        {
+            "fase": "Detected Phase",
+            "descripcion": "Auto-generated from list",
+            "nodos": [
+                [
+                    {
+                        "id": "Friend1",
+                        "emocion": "Nostalgia"
+                    },
+                    {
+                        "id": "AssistantHunter",
+                        "emocion": "Sadness"
+                    },
+                    {
+                        "id": "Friend2",
+                        "emocion": "Curiosity"
+                    }
+                ],
+                {
+                    "fase": "Asking Questions",
+                    "descripcion": "A question is asked about a past event involving music.",
+                    "nodos": [
+                        {
+                            "id": "Friend1",
+                            "emocion": "Curiosity"
+                        },
+                        {
+                            "id": "Friend2",
+                            "emocion": "Interest"
+                        },
+                        {
+                            "id": "AssistantHunter",
+                            "emocion": "Sadness"
+                        }
+                    ]
+                }
+            ],
+            "aristas": []
+        }
+    ]
+}
