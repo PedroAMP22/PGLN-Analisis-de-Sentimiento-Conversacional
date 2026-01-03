@@ -4,3 +4,4 @@ venv
 ./solucion_1_audio_prompt/input/
 ./solucion_1_audio_prompt/src/__pycache__/
 RAVDESS_WavLM_Final
+.env

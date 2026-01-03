@@ -1,450 +1,640 @@
 [
     {
-        "start": 2.58,
-        "end": 5.77,
-        "speaker": "AMADALA",
-        "emotion": "surprise",
-        "mentions": [],
-        "text": "I don't know how much longer I can hold off the veg, my friends. More and more style systems are joining the separatists."
-    },
-    {
-        "start": 6.48,
-        "end": 16.69,
-        "speaker": "AMADALA",
+        "start": 0.15,
+        "end": 0.79,
+        "speaker": "JIM",
         "emotion": "angry",
         "mentions": [],
-        "text": "I don't know how much longer I can hold off the veg, my friends. More and more style systems are joining the separatists."
+        "text": "How about a toast?"
     },
     {
-        "start": 16.94,
-        "end": 18.32,
-        "speaker": "AMADALA",
+        "start": 1.28,
+        "end": 1.79,
+        "speaker": "JIM",
         "emotion": "surprise",
         "mentions": [],
-        "text": "If they do break away, I will not let this republic that has stood for a thousand years be split in two. My negotiations will not fail."
+        "text": "Do you like it?"
     },
     {
-        "start": 18.54,
-        "end": 19.64,
-        "speaker": "AMADALA",
-        "emotion": "angry",
-        "mentions": [],
-        "text": "If they do break away, I will not let this republic that has stood for a thousand years be split in two. My negotiations will not fail."
-    },
-    {
-        "start": 20.11,
-        "end": 20.96,
-        "speaker": "AMADALA",
-        "emotion": "surprise",
-        "mentions": [
-            "JEDI"
-        ],
-        "text": "If they do, you must realize there aren't enough Jedi to protect the republic. We're keepers of the peace, not soldiers."
-    },
-    {
-        "start": 21.5,
-        "end": 24.55,
-        "speaker": "JEDI",
+        "start": 2.61,
+        "end": 4.0,
+        "speaker": "JIM",
         "emotion": "disgust",
         "mentions": [],
-        "text": "If they do, you must realize there aren't enough Jedi to protect the republic. We're keepers of the peace, not soldiers."
+        "text": "Here's two good friends."
     },
     {
-        "start": 25.7,
-        "end": 27.76,
-        "speaker": "JEDI",
-        "emotion": "angry",
+        "start": 5.06,
+        "end": 6.76,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
         "mentions": [],
-        "text": "If they do, you must realize there aren't enough Jedi to protect the republic. We're keepers of the peace, not soldiers."
+        "text": "Cheers."
     },
     {
-        "start": 29.75,
-        "end": 30.74,
-        "speaker": "AMADALA",
-        "emotion": "angry",
+        "start": 11.67,
+        "end": 13.29,
+        "speaker": "JIM",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "That is sort of an oaky after birth."
+    },
+    {
+        "start": 11.76,
+        "end": 12.38,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "That is sort of an oaky after birth."
+    },
+    {
+        "start": 16.5,
+        "end": 19.02,
+        "speaker": "MIKE",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "So, music?"
+    },
+    {
+        "start": 17.61,
+        "end": 18.53,
+        "speaker": "JIM",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "Should we turn some music?"
+    },
+    {
+        "start": 18.93,
+        "end": 20.16,
+        "speaker": "JIM",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "That sounds good."
+    },
+    {
+        "start": 20.84,
+        "end": 23.66,
+        "speaker": "MIKE",
+        "emotion": "happy",
         "mentions": [
-            "YODA"
+            "HUNTER"
         ],
-        "text": "Master Yoda, do you think it will really come to war?"
+        "text": "Do you guys remember my old assistant Hunter?"
     },
     {
-        "start": 32.87,
-        "end": 34.52,
-        "speaker": "AMADALA",
-        "emotion": "angry",
-        "mentions": [
-            "YODA"
-        ],
-        "text": "Master Yoda, do you think it will really come to war?"
-    },
-    {
-        "start": 36.28,
-        "end": 38.17,
-        "speaker": "AMADALA",
+        "start": 24.43,
+        "end": 26.85,
+        "speaker": "MIKE",
         "emotion": "sad",
         "mentions": [],
-        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
+        "text": "He's an excellent songwriter."
     },
     {
-        "start": 38.3,
-        "end": 39.82,
-        "speaker": "AMADALA",
-        "emotion": "angry",
+        "start": 31.44,
+        "end": 34.68,
+        "speaker": "SPEAKER_01",
+        "emotion": "sad",
         "mentions": [],
-        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
+        "text": "You took me by the hand."
     },
     {
-        "start": 41.83,
-        "end": 43.13,
-        "speaker": "AMADALA",
+        "start": 35.84,
+        "end": 39.03,
+        "speaker": "SPEAKER_01",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "It's made me a man that one night."
+    },
+    {
+        "start": 39.21,
+        "end": 40.82,
+        "speaker": "SPEAKER_01",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "It's made me a man that one night."
+    },
+    {
+        "start": 41.85,
+        "end": 43.25,
+        "speaker": "SPEAKER_01",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "You made everything alright."
+    },
+    {
+        "start": 43.94,
+        "end": 46.84,
+        "speaker": "SPEAKER_01",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "You made everything alright."
+    },
+    {
+        "start": 48.28,
+        "end": 53.02,
+        "speaker": "SPEAKER_01",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "So, right, I'm not alright."
+    },
+    {
+        "start": 53.19,
+        "end": 53.81,
+        "speaker": "SPEAKER_01",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "Oh, yeah."
+    },
+    {
+        "start": 55.11,
+        "end": 56.46,
+        "speaker": "SPEAKER_01",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "Oh, yeah."
+    },
+    {
+        "start": 57.07,
+        "end": 59.28,
+        "speaker": "SPEAKER_01",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "So, right, I'm not alright."
+    },
+    {
+        "start": 66.84,
+        "end": 69.98,
+        "speaker": "JIM",
         "emotion": "disgust",
+        "mentions": [
+            "HUNTER"
+        ],
+        "text": "You know what, Hunter was a terrible assistant."
+    },
+    {
+        "start": 69.98,
+        "end": 74.35,
+        "speaker": "MIKE",
+        "emotion": "happy",
         "mentions": [],
-        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
+        "text": "Well, I think he's probably just about as reliable as bam,"
     },
     {
-        "start": 43.89,
-        "end": 45.15,
-        "speaker": "AMADALA",
-        "emotion": "disgust",
-        "mentions": [],
-        "text": "Hmm, the dark side clouds everything, impossible to see, the future is."
-    },
-    {
-        "start": 47.89,
-        "end": 48.58,
-        "speaker": "JEDI",
-        "emotion": "angry",
-        "mentions": [
-            "MAHANA",
-            "JIMA JAVUSKAR",
-            "MAHOHU JAPA"
-        ],
-        "text": "Mahana, Jima Javuskar, Waokimu. Good. Mahohu Japa, done."
-    },
-    {
-        "start": 48.95,
-        "end": 50.66,
-        "speaker": "JEDI",
-        "emotion": "angry",
-        "mentions": [
-            "MAHANA",
-            "JIMA JAVUSKAR",
-            "MAHOHU JAPA"
-        ],
-        "text": "Mahana, Jima Javuskar, Waokimu. Good. Mahohu Japa, done."
-    },
-    {
-        "start": 52.41,
-        "end": 53.74,
-        "speaker": "JEDI",
-        "emotion": "angry",
-        "mentions": [
-            "MAHANA",
-            "JIMA JAVUSKAR",
-            "MAHOHU JAPA"
-        ],
-        "text": "Mahana, Jima Javuskar, Waokimu. Good. Mahohu Japa, done."
-    },
-    {
-        "start": 54.71,
-        "end": 55.38,
-        "speaker": "AMADALA",
+        "start": 74.58,
+        "end": 77.15,
+        "speaker": "MIKE",
         "emotion": "neutral",
         "mentions": [],
-        "text": "Send them in. We will discuss this matter later."
+        "text": "Sometimes I think she holds on to faxes."
     },
     {
-        "start": 57.29,
-        "end": 59.21,
-        "speaker": "AMADALA",
-        "emotion": "angry",
+        "start": 81.72,
+        "end": 82.77,
+        "speaker": "JOAQUIN",
+        "emotion": "fear",
         "mentions": [],
-        "text": "Send them in. We will discuss this matter later."
+        "text": "I just want to eat, which I realize is a lot to ask for."
     },
     {
-        "start": 64.32,
-        "end": 65.4,
-        "speaker": "AMADALA",
-        "emotion": "angry",
-        "mentions": [],
-        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
-    },
-    {
-        "start": 66.03,
-        "end": 68.24,
-        "speaker": "AMADALA",
-        "emotion": "angry",
-        "mentions": [],
-        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
-    },
-    {
-        "start": 68.7,
-        "end": 69.29,
-        "speaker": "AMADALA",
-        "emotion": "happy",
-        "mentions": [],
-        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
-    },
-    {
-        "start": 70.18,
-        "end": 71.38,
-        "speaker": "AMADALA",
-        "emotion": "angry",
-        "mentions": [],
-        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
-    },
-    {
-        "start": 72.04,
-        "end": 73.91,
-        "speaker": "JEDI",
-        "emotion": "angry",
-        "mentions": [
-            "AMADALA"
-        ],
-        "text": "Senator Amadala, your tragedy on the landing platform is terrible. Seeing you alive brings warm feelings to my heart."
-    },
-    {
-        "start": 74.26,
-        "end": 75.92,
-        "speaker": "JEDI",
-        "emotion": "sad",
-        "mentions": [],
-        "text": "Do you have any idea who is behind this attack?"
-    },
-    {
-        "start": 77.23,
-        "end": 80.61,
-        "speaker": "JEDI",
-        "emotion": "angry",
-        "mentions": [],
-        "text": "Our intelligence points to disgruntled spice manners on the moons of Naboo."
-    },
-    {
-        "start": 82.25,
-        "end": 83.93,
-        "speaker": "JEDI",
-        "emotion": "happy",
-        "mentions": [],
-        "text": "I think the Kandugu is behind it."
-    },
-    {
-        "start": 84.73,
-        "end": 86.57,
-        "speaker": "JEDI",
+        "start": 83.73,
+        "end": 85.52,
+        "speaker": "JOAQUIN",
         "emotion": "disgust",
         "mentions": [],
-        "text": "He is a political idealist, not a murderer."
+        "text": "I just want to eat, which I realize is a lot to ask for."
     },
     {
-        "start": 87.02,
-        "end": 87.93,
-        "speaker": "JEDI",
+        "start": 86.79,
+        "end": 87.85,
+        "speaker": "JOAQUIN",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "I had a dinner party."
+    },
+    {
+        "start": 88.86,
+        "end": 90.46,
+        "speaker": "SPEAKER_00",
         "emotion": "angry",
         "mentions": [],
-        "text": "He is a political idealist, not a murderer."
+        "text": "No, it's a hump."
     },
     {
-        "start": 88.62,
-        "end": 90.95,
-        "speaker": "JEDI",
-        "emotion": "disgust",
+        "start": 90.85,
+        "end": 91.58,
+        "speaker": "SPEAKER_00",
+        "emotion": "fear",
+        "mentions": [],
+        "text": "There's a hump."
+    },
+    {
+        "start": 92.44,
+        "end": 93.48,
+        "speaker": "JOAQUIN",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "There's a hump."
+    },
+    {
+        "start": 93.48,
+        "end": 99.64,
+        "speaker": "SPEAKER_00",
+        "emotion": "angry",
         "mentions": [
-            "DUGU"
+            "JOAQUIN"
         ],
-        "text": "You know, my lady count Dugu was once a Jedi. He couldn't assassinate anyone. It's not his character."
+        "text": "Joaquin."
     },
     {
-        "start": 91.58,
-        "end": 92.91,
-        "speaker": "JEDI",
+        "start": 93.5,
+        "end": 95.36,
+        "speaker": "JOAQUIN",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Joaquin."
+    },
+    {
+        "start": 99.71,
+        "end": 102.68,
+        "speaker": "JOAQUIN",
         "emotion": "surprise",
-        "mentions": [
-            "DUGU"
-        ],
-        "text": "You know, my lady count Dugu was once a Jedi. He couldn't assassinate anyone. It's not his character."
-    },
-    {
-        "start": 93.25,
-        "end": 94.18,
-        "speaker": "JEDI",
-        "emotion": "fear",
-        "mentions": [
-            "DUGU"
-        ],
-        "text": "You know, my lady count Dugu was once a Jedi. He couldn't assassinate anyone. It's not his character."
-    },
-    {
-        "start": 96.4,
-        "end": 97.67,
-        "speaker": "AMADALA",
-        "emotion": "angry",
         "mentions": [],
-        "text": "But for certain Senator, in grave danger, you are."
+        "text": "And the second name is the state where Helena is the capital."
     },
     {
-        "start": 98.33,
-        "end": 99.93,
-        "speaker": "AMADALA",
-        "emotion": "disgust",
-        "mentions": [],
-        "text": "But for certain Senator, in grave danger, you are."
-    },
-    {
-        "start": 100.49,
-        "end": 101.55,
-        "speaker": "AMADALA",
-        "emotion": "fear",
-        "mentions": [],
-        "text": "But for certain Senator, in grave danger, you are."
-    },
-    {
-        "start": 102.88,
+        "start": 103.02,
         "end": 104.08,
-        "speaker": "AMADALA",
-        "emotion": "sad",
-        "mentions": [
-            "JEDI"
-        ],
-        "text": "Master Jedi, may I suggest the Senator be placed under the protection of your graces?"
-    },
-    {
-        "start": 104.5,
-        "end": 107.29,
-        "speaker": "AMADALA",
-        "emotion": "disgust",
-        "mentions": [
-            "JEDI"
-        ],
-        "text": "Master Jedi, may I suggest the Senator be placed under the protection of your graces?"
-    },
-    {
-        "start": 107.51,
-        "end": 109.4,
-        "speaker": "AMADALA",
-        "emotion": "surprise",
-        "mentions": [
-            "JEDI"
-        ],
-        "text": "Master Jedi, may I suggest the Senator be placed under the protection of your graces?"
-    },
-    {
-        "start": 110.38,
-        "end": 113.33,
-        "speaker": "AMADALA",
-        "emotion": "disgust",
+        "speaker": "SPEAKER_00",
+        "emotion": "angry",
         "mentions": [],
-        "text": "You really think that's a wise decision under these stressful times?"
+        "text": "Time, time."
     },
     {
-        "start": 113.33,
-        "end": 115.98,
-        "speaker": "JEDI",
-        "emotion": "surprise",
-        "mentions": [],
-        "text": "Chancellor, if I may comment, I do not believe in the situation."
-    },
-    {
-        "start": 115.08,
-        "end": 116.81,
-        "speaker": "AMADALA",
+        "start": 104.17,
+        "end": 107.14,
+        "speaker": "JOAQUIN",
         "emotion": "happy",
         "mentions": [],
-        "text": "Chancellor, if I may comment, I do not believe in the situation."
+        "text": "Time."
     },
     {
-        "start": 118.34,
-        "end": 119.91,
-        "speaker": "AMADALA",
-        "emotion": "surprise",
-        "mentions": [],
-        "text": "No, but I do, Senator. I realize all too well that additional security might be disruptive for you."
-    },
-    {
-        "start": 120.54,
-        "end": 125.68,
-        "speaker": "AMADALA",
-        "emotion": "disgust",
-        "mentions": [],
-        "text": "No, but I do, Senator. I realize all too well that additional security might be disruptive for you."
-    },
-    {
-        "start": 127.69,
-        "end": 129.28,
-        "speaker": "AMADALA",
-        "emotion": "surprise",
-        "mentions": [],
-        "text": "But perhaps some on your familiar wave."
-    },
-    {
-        "start": 130.46,
-        "end": 131.98,
-        "speaker": "AMADALA",
-        "emotion": "sad",
-        "mentions": [
-            "MASTER KENOBI"
-        ],
-        "text": "A no-friend like Master Kenobi."
-    },
-    {
-        "start": 133.02,
-        "end": 133.68,
-        "speaker": "JEDI",
+        "start": 106.87,
+        "end": 107.41,
+        "speaker": "JIM",
         "emotion": "fear",
         "mentions": [
-            "MASTER KENOBI"
+            "MIKE"
         ],
-        "text": "A no-friend like Master Kenobi."
+        "text": "All right, Mike."
     },
     {
-        "start": 135.12,
-        "end": 135.84,
-        "speaker": "JEDI",
-        "emotion": "disgust",
-        "mentions": [
-            "ANCIENNE"
-        ],
-        "text": "That's possible. He's just returned from a border dispute on Ancienne."
-    },
-    {
-        "start": 136.67,
-        "end": 138.98,
-        "speaker": "JEDI",
+        "start": 108.55,
+        "end": 110.73,
+        "speaker": "JIM",
         "emotion": "angry",
         "mentions": [
-            "ANCIENNE"
+            "MIKE"
         ],
-        "text": "That's possible. He's just returned from a border dispute on Ancienne."
+        "text": "Mike."
     },
     {
-        "start": 140.72,
-        "end": 142.49,
-        "speaker": "AMADALA",
+        "start": 111.24,
+        "end": 111.78,
+        "speaker": "JIM",
+        "emotion": "angry",
+        "mentions": [
+            "MIKE"
+        ],
+        "text": "Mike."
+    },
+    {
+        "start": 112.33,
+        "end": 113.53,
+        "speaker": "JIM",
+        "emotion": "angry",
+        "mentions": [
+            "MIKE"
+        ],
+        "text": "Mike."
+    },
+    {
+        "start": 113.53,
+        "end": 122.1,
+        "speaker": "MIKE",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "Mike."
+    },
+    {
+        "start": 117.67,
+        "end": 118.54,
+        "speaker": "JIM",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "Oh, we're so great."
+    },
+    {
+        "start": 120.11,
+        "end": 120.75,
+        "speaker": "JIM",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "Can you just send us all of these people out?"
+    },
+    {
+        "start": 122.63,
+        "end": 126.83,
+        "speaker": "JIM",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "No."
+    },
+    {
+        "start": 125.77,
+        "end": 126.46,
+        "speaker": "MIKE",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "And he was laughing."
+    },
+    {
+        "start": 127.18,
+        "end": 129.23,
+        "speaker": "JIM",
         "emotion": "disgust",
         "mentions": [],
-        "text": "Do it for me, my lady. Please. The thought of losing you is unbearable."
+        "text": "No."
     },
     {
-        "start": 143.49,
-        "end": 145.05,
-        "speaker": "AMADALA",
+        "start": 129.77,
+        "end": 130.29,
+        "speaker": "JIM",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "He's laughing."
+    },
+    {
+        "start": 131.23,
+        "end": 134.76,
+        "speaker": "MICHAEL",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "Michael and Jan seem to be playing their own separate game."
+    },
+    {
+        "start": 135.13,
+        "end": 138.29,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "And it's called Let's See How I'm Comfortable We Can Make Our Guests."
+    },
+    {
+        "start": 139.01,
+        "end": 142.68,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "And they're both winning."
+    },
+    {
+        "start": 144.3,
+        "end": 148.35,
+        "speaker": "MICHAEL",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "You'll never guess."
+    },
+    {
+        "start": 148.58,
+        "end": 150.72,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "Apparently my apartment flooded."
+    },
+    {
+        "start": 151.06,
+        "end": 155.23,
+        "speaker": "MICHAEL",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "Pam, we should probably get going and see the damage."
+    },
+    {
+        "start": 153.07,
+        "end": 154.03,
+        "speaker": "SPEAKER_01",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "Oh, okay."
+    },
+    {
+        "start": 154.03,
+        "end": 154.93,
+        "speaker": "JIM",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "Well, you don't need to have you to do that."
+    },
+    {
+        "start": 158.89,
+        "end": 161.37,
+        "speaker": "MICHAEL",
+        "emotion": "sad",
+        "mentions": [],
+        "text": "That's true."
+    },
+    {
+        "start": 162.44,
+        "end": 166.11,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "Um, dinner's on to delicious."
+    },
+    {
+        "start": 165.56,
+        "end": 168.97,
+        "speaker": "JOAQUIN",
         "emotion": "angry",
         "mentions": [],
-        "text": "Do it for me, my lady. Please. The thought of losing you is unbearable."
+        "text": "Thank you so much."
     },
     {
-        "start": 147.1,
-        "end": 148.16,
-        "speaker": "AMADALA",
-        "emotion": "neutral",
+        "start": 168.97,
+        "end": 170.84,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
         "mentions": [],
-        "text": "Do it for me, my lady. Please. The thought of losing you is unbearable."
+        "text": "I don't know, because everything I own is there."
     },
     {
-        "start": 149.78,
-        "end": 151.72,
-        "speaker": "AMADALA",
+        "start": 170.84,
+        "end": 174.08,
+        "speaker": "JOAQUIN",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "You can buy new stuff, but you can't buy a new party."
+    },
+    {
+        "start": 174.03,
+        "end": 177.57,
+        "speaker": "JIM",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "That's true."
+    },
+    {
+        "start": 179.53,
+        "end": 180.36,
+        "speaker": "JIM",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "Sit down."
+    },
+    {
+        "start": 180.98,
+        "end": 181.74,
+        "speaker": "JIM",
         "emotion": "angry",
         "mentions": [],
-        "text": "I will have Obi-Wan report you immediately, my lady."
+        "text": "On that couch."
+    },
+    {
+        "start": 182.4,
+        "end": 186.85,
+        "speaker": "JIM",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "Be amongst friends."
+    },
+    {
+        "start": 183.75,
+        "end": 184.39,
+        "speaker": "SPEAKER_00",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "And we are not going to think about all your stuff being destroyed."
+    },
+    {
+        "start": 187.34,
+        "end": 190.11,
+        "speaker": "JIM",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "I will."
+    },
+    {
+        "start": 187.39,
+        "end": 188.17,
+        "speaker": "SPEAKER_00",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "I will."
+    },
+    {
+        "start": 188.34,
+        "end": 188.98,
+        "speaker": "SPEAKER_00",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "All right."
+    },
+    {
+        "start": 190.3,
+        "end": 194.77,
+        "speaker": "JIM",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "This is going to be fun."
+    },
+    {
+        "start": 193.38,
+        "end": 197.96,
+        "speaker": "MIKE",
+        "emotion": "fear",
+        "mentions": [],
+        "text": "All right."
+    },
+    {
+        "start": 195.63,
+        "end": 198.72,
+        "speaker": "JIM",
+        "emotion": "fear",
+        "mentions": [],
+        "text": "No names, no rhyming, no sound alike."
+    },
+    {
+        "start": 199.22,
+        "end": 203.91,
+        "speaker": "JIM",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "First name is Blake, and he goes on a cruise."
+    },
+    {
+        "start": 203.91,
+        "end": 204.51,
+        "speaker": "MICHAEL",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Can you hear him?"
+    },
+    {
+        "start": 205.89,
+        "end": 207.12,
+        "speaker": "JIM",
+        "emotion": "fear",
+        "mentions": [],
+        "text": "Ah!"
+    },
+    {
+        "start": 207.12,
+        "end": 207.66,
+        "speaker": "MICHAEL",
+        "emotion": "surprise",
+        "mentions": [],
+        "text": "But he's married to her."
+    },
+    {
+        "start": 207.8,
+        "end": 213.18,
+        "speaker": "JIM",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "Oh, it doesn't scream."
+    },
+    {
+        "start": 213.45,
+        "end": 228.45,
+        "speaker": "JIM",
+        "emotion": "angry",
+        "mentions": [],
+        "text": "I'm going to pass."
+    },
+    {
+        "start": 217.53,
+        "end": 219.03,
+        "speaker": "JOAQUIN",
+        "emotion": "happy",
+        "mentions": [],
+        "text": "Um, rhymes with startled, snorse and egg."
+    },
+    {
+        "start": 219.03,
+        "end": 220.67,
+        "speaker": "MICHAEL",
+        "emotion": "disgust",
+        "mentions": [],
+        "text": "That's not..."
+    },
+    {
+        "start": 236.82,
+        "end": 237.39,
+        "speaker": "SPEAKER_01",
+        "emotion": "happy",
+        "mentions": [],
+        "text": ""
     }
 ]
