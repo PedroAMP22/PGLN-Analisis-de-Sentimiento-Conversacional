@@ -174,3 +174,18 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
+Gemini fue el que mejores resultados obtuvo y esto es el resumen de los diferentes prompts.
+- Zero-shot and role: Al guiar al modelo al espacio latente relacionado con los sentimientos mediante el role pudimos realizar un
+ánalisis de los audios preciso salvo en caso de emociones como sarcasmo que analizaba de manera superficial debido a la ausencia de
+un razonamiento forzado sobre los pasos para realizar un ánalisis profundo.
+- CoT: Este prompt mejoró la identificación de emociones o relaciones más complejas como puede ser el sarcasmos sin embargo, al especificarle
+diferentes niveles de razonamiento el modelo alucinaba en ciertos audios donde participaban muchas personas como the office con diferentes timbres
+y se volvía demasiado estricto llegando a separar a una misma persona en 2 diferentes.
+- LTM: esta sin duda fue la mejor solución al permitirle razonar y descomponer el problema en subproblemas más sencillos que se identificaban
+con los pasos lógicos para esta tarea. Como puede ser identificar primero a los hablantes que eran los "nodos" antes de establcer las "aristas" o relaciones
+entre estos.
+Para el caso de GPT el mayor limitante fue el uso de whisper que utiliza para transformarlo a texto que sin duda es un gran cuello de botella
+y elimina información clave como puede ser el tono de voz.
+"""

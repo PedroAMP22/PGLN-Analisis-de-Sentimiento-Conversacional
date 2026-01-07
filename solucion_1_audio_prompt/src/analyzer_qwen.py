@@ -192,3 +192,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+"""
+Tras la realizacion de pruebas se observa que se trata de una tarea demasiado compleja para un modelo tan "simple" al menos en la version
+cuantizada de 8 bits. El modelo procedía a alucinar tanto en la información del dialogo como en las propias relaciones llegando a malformatear el propio json. 
+Los json qwen_marrigae story_strat1.json y qwen_office_strat1.json fueron los que llegamos a considerar como más "aceptables" aplicando técnicas como reconstrucción de jsons completandolos
+con la informacion o estructura adecuada.
+"""
